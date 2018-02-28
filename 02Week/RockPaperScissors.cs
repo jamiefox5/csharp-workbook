@@ -7,6 +7,8 @@ public class Program
         Console.WriteLine("Welcome to Rock, Paper, Scissors");
         Console.WriteLine("Enter hand 1:");
         string hand1 = Console.ReadLine().ToLower();
+        Console.Clear();
+        Console.WriteLine("Welcome to Rock, Paper, Scissors");
         Console.WriteLine("Enter hand 2:");
         string hand2 = Console.ReadLine().ToLower();
         compareHands(hand1, hand2);
@@ -36,8 +38,6 @@ public class Program
 
             }
 
-
-
             else if (hand1 == "scissors" && hand2 == "rock")
             {
                 Console.WriteLine("Rock wins! Way to go hand 2");
@@ -48,7 +48,6 @@ public class Program
                 Console.WriteLine("Scissors Wins! Way to go hand 1");
                 Console.ReadLine();
             }
-
 
             else if (hand1 == "paper" && hand2 == "rock")
             {
