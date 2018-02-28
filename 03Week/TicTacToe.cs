@@ -1,4 +1,4 @@
-﻿//using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 
@@ -49,7 +49,7 @@ public class Program
         bool result = false;
 
         if (playerTurn == "X")
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Yellow;
         else
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -206,27 +206,15 @@ public class Program
 
     public static void DrawBoard()
     {
-        //Console.WriteLine("  0 1 2");
-        //Console.WriteLine("0 " + String.Join("|", board[0]));
-        //Console.WriteLine("  -----");
-        //Console.WriteLine("1 " + String.Join("|", board[1]));
-        //Console.WriteLine("  -----");
-        //Console.WriteLine("2 " + String.Join("|", board[2]));
 
-        /*
-          [1][2][3] 
-          [4][5][6]
-          [7][8][9]
-        */
 
         Console.Clear();
 
-        //var json = JsonConvert.SerializeObject(board, Formatting.None);
-        //Console.WriteLine(json);
 
-        Console.WriteLine(">>>>TIC TAC TOE<<<<");
 
-        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("Let's Play TIC-TAC-TOE");
+
+        Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine();
 
         foreach (var row in board)
@@ -234,20 +222,22 @@ public class Program
             foreach (var column in row)
             {
                 if (column == "X")
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                 else if (column == "O")
                     Console.ForegroundColor = ConsoleColor.Green;
 
                 Console.Write(" " + column + " ");
 
-                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.ForegroundColor = ConsoleColor.White;
 
             }
 
             Console.WriteLine();
         }
 
-        Console.WriteLine();
-        Console.ResetColor();
+
+
+
+
     }
 }
