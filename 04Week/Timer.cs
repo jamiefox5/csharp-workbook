@@ -1,9 +1,26 @@
-using System;
+﻿using System;
+using System.Diagnostics;
+using System.Threading;
 
-public class Program
+class Timer
 {
-	public static void Main()
-	{
-		Console.WriteLine("Hello World");
-	}
+    static void Main()
+    {
+        // Create new stopwatch.
+        Stopwatch stopwatch = new Stopwatch();
+
+        // Begin timing.
+        stopwatch.Start();
+        Stopwatch.Elapsed
+
+
+        // Stop timing.
+        stopwatch.Stop();
+
+        TimeSpan duration = new TimeSpan;
+
+        // Write result.
+        Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
+        Console.ReadLine();
+    }
 }
