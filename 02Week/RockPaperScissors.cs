@@ -11,55 +11,53 @@ public class Program
         Console.WriteLine("Welcome to Rock, Paper, Scissors");
         Console.WriteLine("Enter hand 2:");
         string hand2 = Console.ReadLine().ToLower();
-        compareHands(hand1, hand2);
-
+        string returnedResult = compareHands(hand1, hand2);
+        Console.WriteLine(returnedResult);
         Console.ReadLine();
+        playerChoice();
     }
 
-    private static void compareHands(string hand1, string hand2)
+    private static string compareHands(string hand1, string hand2)
     {
-
         {
             if (hand1 == hand2)
             {
-                Console.WriteLine("It's a tie!");
-                Console.ReadLine();
+                return "It's a tie!";
             }
 
             else if (hand1 == "rock" && hand2 == "scissors")
             {
-                Console.WriteLine("Rock wins! Way to go hand 1");
-                Console.ReadLine();
+                return "Rock wins! Way to go hand 1";
             }
             else if (hand1 == "rock" && hand2 == "paper")
             {
-                Console.WriteLine("Paper Wins! Way to go hand 2");
-                Console.ReadLine();
-
+                return "Paper Wins! Way to go hand 2";
             }
 
             else if (hand1 == "scissors" && hand2 == "rock")
             {
-                Console.WriteLine("Rock wins! Way to go hand 2");
-                Console.ReadLine();
+                return "Rock wins! Way to go hand 2";
             }
             else if (hand1 == "scissors" && hand2 == "paper")
             {
-                Console.WriteLine("Scissors Wins! Way to go hand 1");
-                Console.ReadLine();
+                return "Scissors Wins! Way to go hand 1";
             }
 
             else if (hand1 == "paper" && hand2 == "rock")
             {
-                Console.WriteLine("Paper wins! Way to go hand 1");
-                Console.ReadLine();
+                return "Paper wins! Way to go hand 1";
             }
             else if (hand1 == "paper" && hand2 == "scissors")
             {
-                Console.WriteLine("Scissors Wins! Way to go hand 2");
-                Console.ReadLine();
+                return "Scissors Wins! Way to go hand 2";
             }
+
+            return "";
         }
+    }
+
+    private static void playerChoice()
+    {
         //play again?Rockcd
         Console.WriteLine("Would you like to play again? Enter 1 for yes and 2 for no");
         string playerChoice = Console.ReadLine();
@@ -68,8 +66,6 @@ public class Program
         {
             //calling method to start game
             Main();
-            //calling method to display results of game
-            compareHands(hand1, hand2);
         }
 
         else if (playerChoice == "2")
@@ -77,8 +73,5 @@ public class Program
             Console.WriteLine("Thanks for playing");
             Console.ReadLine();
         }
-
-
-
     }
 }
